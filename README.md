@@ -1,6 +1,6 @@
 # Introduction
 
-The software implements  novel approach for mining correlation in collections consisting
+The software implements the novel approach for mining correlation in collections consisting
 of a large number of time series. In our approach, we use bursts co-occurring in
 different streams as the measure of their relatedness. By exploiting the pruning
 properties of our measure we develop new indexing structures and algorithms
