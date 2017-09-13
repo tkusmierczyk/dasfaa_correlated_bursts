@@ -1,24 +1,20 @@
-# Introduction
+Code used in the following paper:
 
-The software implements the novel approach for mining correlation in collections consisting
+**T. Kusmierczyk, K. Nørvåg: Mining Correlations on Massive Bursty Time Series Collections. DASFAA 2015.**
+
+-----------------------------------------------------------------------------------------------------------------
+
+### Introduction
+
+The software implements a novel approach for mining correlation in collections consisting
 of a large number of time series. In our approach, we use bursts co-occurring in
 different streams as the measure of their relatedness. By exploiting the pruning
 properties of our measure we develop new indexing structures and algorithms
-that allow for efficient mining of related pairs from millions of streams. An 
-experimental study performed on a large time series collection demonstrates the
-efficiency and scalability of the proposed approach.
+that allow for efficient mining of related pairs from millions of streams. 
 
+### Requirements
 
-# Paper
-
-The code is a part of the following publication (that should be eventually cited):
-`Tomasz Kusmierczyk, Kjetil Nørvåg: Mining Correlations on Massive Bursty Time Series Collections. DASFAA (1) 2015: 55-71`
-
-
-# Requirements
-
-The code was tested on Ubuntu 14.04 (3.18.5-031805-generic x86_64 GNU/Linux) with Python 2.7.6. 
-To run scripts the following libraries are required:
+The code was tested on Ubuntu 14.04 (3.18.5-031805-generic x86_64 GNU/Linux) with Python 2.7.6. The following libraries are required:
 * numpy
 * Rtree (and libspatialindex-dev)
 
@@ -30,7 +26,7 @@ sudo apt-get install libspatialindex-dev
 sudo easy_install Rtree
 ```
 
-# Data format
+### Data format
 
 Scripts work with files that contain multiple bursty time series. 
 Each line describes a single time serie. 
@@ -49,7 +45,7 @@ Sample entry:
 Sample data can be found in `sample_data` directory.
 
 
-# Running scripts
+### Running scripts
 
 To identify correlated bursty time series use the following:
 * List-based (LB) index: `index/bursts_index_list.py` `index/bursts_index_list_border_run.py`
